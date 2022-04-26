@@ -21,32 +21,34 @@
         <div class="weather-app">
           <div class="overview">
             <h1 id="city">Wantirna South VIC</h1>
-            <ul class="date">
-              <li>Friday</li>
-              <li id="description">Clear</li>
+            <ul>
+              <li id="date">Tuesday 26.04</li>
+              <li id="temp-describe">Clear</li>
             </ul>
             <div class="row">
               <div class="col-6">
-                <div class="clearfix weather-temperature">
+                <div class="clearfix">
                   <img
-                    class="float-left"
                     alt="Clear with periodic clouds"
                     src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                    id="wob_tci"
+                    id="main-icon"
+                    class="float-left"
                   />
-                  <div class="float-left">
-                    <strong>16</strong
-                    ><span class="units">ºC| <a href="#">ºF</a></span>
-                  </div>
+                  <span class="temperature" id="temperature">16</span>
+                  <span class="units">
+                    <a href="#" id="celcius-link">ºC|</a>
+                    <a href="#" id="fahrenheit-link">ºF</a>
+                  </span>
                 </div>
               </div>
-            </div>
-            <div class="col-6">
-              <ul>
-                <li>Preciptation: 0%</li>
-                <li>Humidity: 75%</li>
-                <li>Wind: 4km/h</li>
-              </ul>
+
+              <div class="col-6">
+                <ul id="tendency">
+                  <li>Preciptation: 0%</li>
+                  <li>Humidity: 75%</li>
+                  <li>Wind: 4km/h</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
