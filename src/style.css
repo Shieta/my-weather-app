@@ -76,7 +76,18 @@ li {
 #celcius-link {
   position: relative;
   top: -34px;
+  color: black;
 }
+
+.weather-temperature .active {
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
 #fahrenheit-link {
   position: relative;
   top: -34px;
