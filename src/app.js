@@ -18,36 +18,37 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${minutes} ${hours}`;
+  return `${day} ${hours}:${minutes}`;
 }
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Fri", "Sat", "Sun"];
+  let days = ["Fri", "Sat", "Sun", "Mon"];
 
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       ` 
-              <div class="col-2">
-                <div class="weather-forecast-date">${day}</div>
-                <img
-                  src="http://openweathermap.org/img/wn/01d@2x.png"
-                  alt=""
-                  width="42"
-                />
-                <div class="weather-forecast-temperatures">
-                  <span class="weather-forecast-temperature-max">18º</span>
-                  <span class="weather-forecast-temperature-min">10º</span>
-                </div>
-              </div>
-            </div>`;
+         <div class="col-2">
+           <div class="weather-forecast-date">${day}</div>
+           <img
+              src="http://openweathermap.org/img/wn/01d@2x.png"
+              alt=""
+              width="42"
+           />
+         <div class="weather-forecast-temperatures">
+            <span class="weather-forecast-temperature-max">18º</span>
+            <span class="weather-forecast-temperature-min">10º</span>
+         </div>
+        </div>`;
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
 }
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -68,7 +69,7 @@ function displayTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  iconElement.setAttribute("al", response.data.weather[0].description);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function handleSubmit(event) {
@@ -110,3 +111,6 @@ function search(city) {
 
   axios.get(apiUrl).then(displayTemperature);
 }
+
+search("New York");
+displayForecast();
