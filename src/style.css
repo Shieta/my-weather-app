@@ -1,11 +1,16 @@
 body {
   font-family: arial, sans-serif;
+  background: radial-gradient(
+    circle at 15% 15%,
+    rgb(202, 228, 255) 39.5%,
+    rgba(45, 62, 74, 0.23) 100.2%
+  );
 }
 
 h1 {
-  color: rgb(32, 33, 36);
+  color: darkblue;
   font-size: 24px;
-  font-weight: 100;
+  font-weight: 400;
   line-height: 28px;
   margin-bottom: 0;
 }
@@ -29,10 +34,15 @@ li {
   margin: 0;
   padding: 0;
 }
-#main-icon {
-  display: inline-block;
-  vertical-align: top;
+
+.col-6 {
+  margin-top: 20px;
 }
+
+#city {
+  margin-top: -10px;
+}
+
 .overview {
   margin-bottom: 20px;
 }
@@ -48,7 +58,7 @@ li {
 
 .temperature {
   line-height: 1;
-  font-weight: bolder;
+  font-weight: 500;
   color: darkblue;
   font-size: 64px;
 }
@@ -58,21 +68,24 @@ li {
 }
 .weather-app {
   padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
+  border: 1px solid darkblue;
+  border-radius: 10px;
 }
 
 #main-icon {
-  margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  margin-right: 0px;
+  height: 120px;
+  width: 120px;
+  margin-left: -10px;
+  margin-top: -45px;
 }
 
 .temperature #temperature {
   color: rgb(32, 33, 36);
-  font-size: 64px;
+  font-size: 50px;
   font-weight: 400;
   line-height: 1;
+  margin-left: -15px;
 }
 #celcius-link {
   position: relative;
@@ -98,6 +111,7 @@ li {
   text-align: right;
   padding-top: 0;
   padding-bottom: 0;
+  margin-top: 2px;
 }
 
 .weather-forecast {
@@ -110,6 +124,8 @@ li {
   font-size: 16px;
   color: #000;
   opacity: 0.6;
+  font-weight: 600;
+  color: black;
 }
 
 .weather-forecast-temperatures {
@@ -118,4 +134,8 @@ li {
 
 .weather-forecast-temperatures-min {
   opacity: 0.6;
+}
+
+#second-icon {
+  width: 80px;
 }

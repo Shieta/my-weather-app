@@ -40,22 +40,23 @@ function displayForecast(response) {
         forecastHTML +
         ` 
          <div class="col-2">
-           <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-           <img
+         <img
               src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
               }@2x.png"
               alt=""
               width="42"
+              id="second-icon"
            />
          <div class="weather-forecast-temperatures">
             <span class="weather-forecast-temperature-max">${Math.round(
               forecastDay.temp.max
-            )}</span>
+            )}º  | </span>
             <span class="weather-forecast-temperature-min">${Math.round(
               forecastDay.temp.min
-            )}</span>
+            )}º</span>
          </div>
+         <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         </div>`;
     }
   });
