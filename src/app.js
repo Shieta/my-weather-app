@@ -136,5 +136,5 @@ function search(city) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
-search("New York");
+search("Melbourne");
 displayForecast();
